@@ -1,20 +1,7 @@
 import React, { useState } from "react";
 import keyOption from "./keydata";
-import "../image/VNR.jpg";
+import SelectFields from "./data";
 
-const SelectFields = [
-  {
-    selection: 1,
-    name: "flower",
-    option: ["Rose", "Chrysanthemum", "Lily", "Orchid"],
-  },
-  {
-    selection: 2,
-    name: "color",
-    option: ["Đỏ", "Hồng", "Tím ", "vàng", "Trắng", "Hồng"],
-  },
-  { selection: 3, name: "field3", option: ["USA", "VN"] },
-];
 
 function SelectionFields() {
   // get default value
@@ -23,7 +10,7 @@ function SelectionFields() {
     listDefault[item.name] = item.option[0];
   });
 
-  console.log(listDefault);
+//   console.log(listDefault);
 
   const [selectedValues, setSelectedValues] = useState(listDefault);
 
