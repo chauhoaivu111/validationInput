@@ -1,17 +1,9 @@
 const listinput = [
-  { label: "name of pet", 
+  { label: "name", 
     name: "input1", 
     value: "", 
     error: "mus be string" 
   },
-  { label: "color of pet",
-    name: "input2", 
-    value: "", 
-    error: "mus be string" },
-  { label: "gender of pet", 
-    name: "input3", 
-    value: "", 
-    error: "mus be string" },
   {
     label: "email",
     name: "email",

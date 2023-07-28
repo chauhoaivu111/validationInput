@@ -1,0 +1,136 @@
+.main_frame_input {
+    // background-color: rgb(190, 172, 172);   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 25px 25px 0px 25px;
+    border-left:6px solid rgb(211,130,37);
+    border-right:6px solid rgb(211,130,37);
+    border-top:6px solid rgb(211,130,37);
+
+}
+
+
+
+.frame_input {
+    height: 40vh;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    box-sizing: border-box;
+    margin-top: 2rem;
+   
+    
+    
+
+    label {
+
+        font-size: 14px;
+        margin-left: 1rem;
+        color: rgb(99, 99, 99);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+
+    input {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+
+        box-sizing: border-box;
+        display: block;
+        margin-bottom: 1rem;
+        background-color: rgb(244, 244, 244);
+        border: 0.5px solid rgb(167, 167, 167);
+        width: 95%;
+        border-radius: 2px;
+        height: 1.5rem;
+    }
+
+    input:focus {
+        outline: none;
+        
+    }
+
+
+
+}
+
+.frame_information {
+    border-left:6px solid rgb(174,174,174);
+   
+
+    .alert_error1{
+
+        display: flex;
+        width: 90%;
+        margin: auto;
+        // justify-content: center;
+        // align-items: center;
+        // justify-items: center;
+        background-color: rgb(244,224,218) ;
+        margin-top: 30px;
+        height: 5rem;
+        border-radius: 30px;
+        box-sizing: border-box;
+
+       .icons {
+
+       
+       
+
+        h1 {
+
+            color: rgb(179,44,6);
+            margin-left: 20px;
+        }
+       }
+
+        .infor_fillout{
+            display: block;
+            margin-left: 15px;
+
+            h3 {
+                color: rgb(179,44,6);
+                // font-size: 15px;
+                // font-weight: 600;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                align-items: center;
+               
+    
+            }
+    
+            p{
+                color: rgb(179,44,6);
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                margin-top: -18px;
+            
+                
+            }
+
+
+        }
+        
+    }
+
+
+    .frame_infordata {
+       
+
+        
+
+        p{
+            margin: 2rem;
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 20px;
+        }
+    }
+
+
+    
+}

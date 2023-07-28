@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import validKeys from '../data';
+import validKeys from '../../data';
 import "../inputfield/InputField.scss"
 
 const initialState = {

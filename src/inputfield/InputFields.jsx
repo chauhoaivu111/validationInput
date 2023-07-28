@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import listinput from "./data";
+import "../inputfield/InputField.scss";
 
 
 
@@ -22,8 +23,7 @@ function InputFields() {
     return checkphone.test(phone);
   };
   const validationMail = (mail) => {
-    const checkmail =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const checkmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return checkmail.test(mail);
   };
 
@@ -44,14 +44,19 @@ function InputFields() {
   return (
     <div>
       {inputField.map((item, index) => (
-        <div key={index}>
+        <div key={index} className="frame_input_label">
+          <div>
           <label htmlFor={item.name}>{item.label}</label>
+          </div>
           <input
             id={item.name}
             value={item.value}
             onChange={(e) => handleChange(e, index)}
           />
-          {errorMesseges(item.type, item.value, item.error)}
+          <div className="frame_error">
+          <p>{errorMesseges(item.type, item.value, item.error)}</p>
+          </div>
+          
         </div>
       ))}
     </div>

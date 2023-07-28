@@ -7,10 +7,32 @@ import USARP from "../image/USARP.jpg";
 
 
 const keyOption = [
-    [['Rose', 'Đỏ', 'USA'], USAR],
-    [['Rose', 'Hồng', 'USA'], USARP],
-    [['Rose', 'Đỏ', 'VN'], VNR],
-    [['Rose', 'Hồng', 'VN'],VNRP],
+   
+    {
+      flower:"Rose",
+      color:"Red",
+      country:"USA",
+      images:USAR
+    },
+    {
+      flower:"Rose",
+      color:"Red",
+      country:"VN",
+      images:VNR
+    },
+    {
+      flower:"Rose",
+      color:"Pink",
+      country:"VN",
+      images:USARP
+    },
+    {
+      flower:"Rose",
+      color:"Pink",
+      country:"USA",
+      images:VNRP
+    },
+
   ];
 
   export default keyOption
