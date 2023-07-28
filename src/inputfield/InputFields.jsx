@@ -3,9 +3,6 @@ import listinput from "./data";
 import "../inputfield/InputField.scss";
 
 
-
-
-
 function InputFields() {
   const [inputField, setInputField] = useState(listinput);
 
