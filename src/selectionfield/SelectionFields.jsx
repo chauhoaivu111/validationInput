@@ -23,17 +23,17 @@ function SelectionField() {
 
   const checkValueMatched = (array,object) => {
   
-    console.log(object)
+    // console.log(object)
     // find object in array check for each item in array
     const findItem = array.find((item) => 
      Object.entries(object).every(([key,value]) => item[key] === value))
 
-     console.log(findItem)
+    //  console.log(findItem)
       return findItem ? findItem.images : ""
  
   }
   const result = checkValueMatched(keyOption, selectedValues)
-  console.log(result)
+  // console.log(result)
 
   
   return (
@@ -66,5 +66,3 @@ function SelectionField() {
 }
 
 export default SelectionField;
-
-

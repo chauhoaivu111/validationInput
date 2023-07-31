@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useState } from "react";
 import listinput from "./data";
 import "../inputfield/InputField.scss";
+import Check_error from "./check_error";
 
 
 function InputFields() {
@@ -8,55 +10,36 @@ function InputFields() {
 
   const handleChange = (e, index) => {
     const values = e.target.value;
-    setInputField((prvState) => {
-      const setField = [...prvState];
+    setInputField((prevState) => {
+      const setField = [...prevState];
       setField[index].value = values;
       return setField;
     });
   };
 
-  const validationPhone = (phone) => {
-    const checkphone = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-    return checkphone.test(phone);
-  };
-  const validationMail = (mail) => {
-    const checkmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    return checkmail.test(mail);
-  };
-
-  const errorMesseges = (type, value, error) => {
-    if (value !== "") {
-      if (type === "Num" && isNaN(value)) {
-        return <p style={{ color: "red" }}>{error}</p>;
-      } else if (type === "Phone" && !validationPhone(value)) {
-        return <p style={{ color: "red" }}>{error}</p>;
-      } else if (type === "Email" && !validationMail(value)) {
-        return <p style={{ color: "red" }}>{error}</p>;
-      } else if (!isNaN(value) && !type) {
-        return <p style={{ color: "red" }}>{error}</p>;
-      }
-    }
-  };
-
   return (
-    <div>
-      {inputField.map((item, index) => (
-        <div key={index} className="frame_input_label">
-          <div>
-          <label htmlFor={item.name}>{item.label}</label>
+
+      <div>
+        {inputField.map((item, index) => (
+          <div key={index} className="frame_input_label">
+            <div>
+              <label htmlFor={item.name}>{item.label}</label>
+            </div>
+            <input
+              id={item.name}
+              value={item.value}
+              onChange={(e) => handleChange(e, index)}
+            />
+            <div className="frame_error">
+             
+              <Check_error type = {item.type} value ={item.value} error ={item.error}/>
+            </div>
           </div>
-          <input
-            id={item.name}
-            value={item.value}
-            onChange={(e) => handleChange(e, index)}
-          />
-          <div className="frame_error">
-          <p>{errorMesseges(item.type, item.value, item.error)}</p>
-          </div>
-          
-        </div>
-      ))}
-    </div>
+        ))}
+
+        
+      </div>
+
   );
 }
 
