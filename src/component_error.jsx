@@ -4,7 +4,7 @@ import { ErrorContext } from './Provider';
 const Component_error = () => {
 
     const {errorMessages} = useContext(ErrorContext)
-    console.log("fff",errorMessages)
+    console.log("error",errorMessages)
   return (
     <div>
         

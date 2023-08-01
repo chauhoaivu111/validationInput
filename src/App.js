@@ -4,7 +4,7 @@ import './App.css'
 import InputFields from './inputfield/InputFields';
 import SelectionFields from './selectionfield/SelectionFields';
 import Component_error from './component_error';
-
+import Test from './test';
 
 
 function App() {
@@ -13,9 +13,10 @@ function App() {
   return (
     <div>
 
-      <InputFields/>
+      {/* <InputFields/>
       <Component_error/>
-      <SelectionFields/>
+      <SelectionFields/> */}
+      <Test/>
     
       
     </div>

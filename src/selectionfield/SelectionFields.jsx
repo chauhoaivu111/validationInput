@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-import keyOption from "./keydata";
 import SelectFields from "./data";
-import "./SelectionField.scss"
+import "./SelectionField.scss";
+import keyOption from "./keydata"
 
-
+const checkValueMatched = (array, object) => {
+  // Find object in array check for each item in array
+  const findItem = array.find((item) =>
+    Object.entries(object).every(([key, value]) => item[key] === value)
+  );
+  return findItem ? findItem.images : "";
+};
 function SelectionField() {
-  
-  const listDefault = SelectFields.reduce((name, item) => {
-    name[item.name] = item.option[0];
+  const listDefault = Object.keys(SelectFields).reduce((name, key) => {
+    name[key] = SelectFields[key].option[0];
     return name;
   }, {});
-  
 
   const [selectedValues, setSelectedValues] = useState(listDefault);
+
   const handleChange = (e, name) => {
     const values = e.target.value;
     setSelectedValues((prevState) => ({
@@ -20,32 +25,18 @@ function SelectionField() {
       [name]: values,
     }));
   };
+const result = checkValueMatched(keyOption, selectedValues);
 
-  const checkValueMatched = (array,object) => {
-  
-    // console.log(object)
-    // find object in array check for each item in array
-    const findItem = array.find((item) => 
-     Object.entries(object).every(([key,value]) => item[key] === value))
-
-    //  console.log(findItem)
-      return findItem ? findItem.images : ""
- 
-  }
-  const result = checkValueMatched(keyOption, selectedValues)
-  // console.log(result)
-
-  
   return (
     <div className="main_frame_selection">
       <div className="first_frame">
-        {SelectFields.map((item) => (
-          <div key={item.name} className="frame_selection">
+        {Object.keys(SelectFields).map((key) => (
+          <div key={key} className="frame_selection">
             <select
-              value={selectedValues[item.name]}
-              onChange={(e) => handleChange(e, item.name)}
+              value={selectedValues[key]}
+              onChange={(e) => handleChange(e, key)}
             >
-              {item.option.map((option, index) => (
+              {SelectFields[key].option.map((option, index) => (
                 <option key={index} value={option}>
                   {option}
                 </option>
@@ -55,11 +46,7 @@ function SelectionField() {
         ))}
       </div>
       <div className="second_frame">
-        {result ? (
-          <img src={result} alt="" />
-        ) : (
-          <h1>Not found</h1>
-        )}
+        {result ? <img src={result} alt="" /> : <h1>Not found</h1>}
       </div>
     </div>
   );
