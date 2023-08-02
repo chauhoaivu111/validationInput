@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import { ErrorContext } from './Provider';
 
-const Component_error = () => {
+const ComponentError = () => {
 
     const {errorMessages} = useContext(ErrorContext)
     console.log("error",errorMessages)
@@ -16,4 +16,4 @@ const Component_error = () => {
   )
 }
 
-export default Component_error
+export default ComponentError

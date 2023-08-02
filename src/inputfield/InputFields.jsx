@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import listinput from "./data";
 import "../inputfield/InputField.scss";
-import Check_error from "./check_error";
+import Check_error from "./CheckError";
 
 
 function InputFields() {

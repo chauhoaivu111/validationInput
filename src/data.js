@@ -4,22 +4,24 @@ const data = {
     { CountryName: "United States", CountryId: "2" },
     { CountryName: "Viet Nam", CountryId: "3" },
   ],
-  stateData: [
-    { StateName: "Rose", CountryIds: ["1" , "3"], StateId: "101" },
-    { StateName: "Chrysanthemum", CountryIds: ["1"], StateId: "102" },
-    { StateName: "Lily", CountryIds: ["2", "1"], StateId: "105" },
-    { StateName: "Orchid", CountryIds: ["2", "1"], StateId: "105" },
+  flowerData: [
+    { flowerName: "Rose", CountryId: ["1","2","3"], flowerId: "101" },
+    { flowerName: "Sunflower", CountryId: ["1","3"], flowerId: "102" },
+    { flowerName: "Tulip ", CountryId: ["2", "3"], flowerId: "103" },
+    { flowerName: "Magnolia", CountryId: ["1"], flowerId: "103" },
+    { flowerName: "Cyclamen", CountryId: ["2"], flowerId: "102" },
+    { flowerName: "Lotus  ", CountryId: ["3"], flowerId: "101" },
   ],
-  cityData: [
-    { CityName: "Orchid1", StateIds: ["105"], CityId: 201 },
-    { CityName: "Orchid2", StateIds: ["105"], CityId: 202 },
-    { CityName: "Orchid3", StateIds: ["105"], CityId: 206 },
-    { CityName: "Orchid4", StateIds: ["105"], CityId: 205, },
-    { CityName: "Rose", StateIds: ["105", "101"], CityId: 213 },
-    { CityName: "Rose1", StateIds: ["105", "101","102"], CityId: 213 , status: "true" },
-    { CityName: "Rose2", StateIds: ["105", "101","102"], CityId: 213, status: "true" },
-    { CityName: "Rose3", StateIds: ["105", "101","102"], CityId: 213, status: "true" },
-    { CityName: "Rose4", StateIds: ["105", "101","102"], CityId: 213 },
-    { CityName: "Launceston", StateIds: ["105"], CityId: 214 },
+  colorData: [
+    { colorName: "Red", ColorIds: ["101"] ,  },
+    { colorName: "Pink", ColorIds: ["101"] },
+    { colorName: "Blue", ColorIds: ["102"] },
+    { colorName: "purple", ColorIds: ["102"] },
+    { colorName: "White", ColorIds: ["103", "101"] },
+    { colorName: "Yellow", ColorIds: ["103","102"] },
   ],
+
+  
 };
+
+export default data

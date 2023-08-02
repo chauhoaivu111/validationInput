@@ -11,7 +11,7 @@ const validationMail = (mail) => {
   return checkmail.test(mail);
 };
 
-const Check_error = ({ type, value, error }) => {
+const CheckError = ({ type, value, error }) => {
   const { errorMessages, setErrorMessages } = useContext(ErrorContext);
 
   const updateMessagesError = useCallback(() => {
@@ -48,4 +48,4 @@ const Check_error = ({ type, value, error }) => {
   </p>) : null
 };
 
-export default Check_error;
+export default CheckError;

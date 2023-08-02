@@ -1,10 +1,14 @@
 /* eslint-disable react/jsx-pascal-case */
 import React from 'react';
 import './App.css'
+import CascadingSelect from './selectionfield/CascadingSelect';
 import InputFields from './inputfield/InputFields';
 import SelectionFields from './selectionfield/SelectionFields';
-import Component_error from './component_error';
-import Test from './test';
+import Component_error from './ComponentError';
+// import Test from './test';
+
+
+
 
 
 function App() {
@@ -12,11 +16,18 @@ function App() {
 
   return (
     <div>
-
-      {/* <InputFields/>
+      <div>
+      <InputFields/>
       <Component_error/>
-      <SelectionFields/> */}
-      <Test/>
+      </div>
+
+      <div>
+      <SelectionFields/>
+      </div>
+      
+      {/* <Test/> */}
+      {/* <CascadingSelect/> */}
+   
     
       
     </div>
