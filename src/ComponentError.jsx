@@ -6,12 +6,9 @@ const ComponentError = () => {
     const {errorMessages} = useContext(ErrorContext)
     console.log("error",errorMessages)
   return (
-    <div>
-        
+    <div>  
         { Object.keys(errorMessages).map((item) => (
-            <div key={item}> {errorMessages[item]}</div>
-        )) }
-        
+            <div key={item}> {errorMessages[item]}</div> ))}
     </div>
   )
 }

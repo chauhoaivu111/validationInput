@@ -16,17 +16,17 @@ function App() {
 
   return (
     <div>
-      <div>
+      {/* <div>
       <InputFields/>
       <Component_error/>
       </div>
 
       <div>
       <SelectionFields/>
-      </div>
+      </div> */}
       
       {/* <Test/> */}
-      {/* <CascadingSelect/> */}
+      <CascadingSelect/>
    
     
       

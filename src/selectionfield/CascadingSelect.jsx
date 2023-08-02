@@ -6,7 +6,7 @@ const CascadingSelect = () => {
   const [selectedValues, setSelectedValues] = useState({});
   const [showOnlyOneCountry, setShowOnlyOneCountry] = useState(false);
 
-  
+
   useEffect(() => {
     // set default value
     const countryId = data.countryData[0]?.CountryId || "";
@@ -14,7 +14,6 @@ const CascadingSelect = () => {
     const colorData = data.colorData;
     const flowerId = flowerData.find(flower => flower.CountryId.includes(countryId))?.flowerId || "";
     const colorName = colorData.find(color => color.ColorIds.includes(flowerId))?.colorName || "";
-
     setSelectedValues(prevSelectedValues => ({
       ...prevSelectedValues,
       country: data.countryData[0].CountryId,
@@ -23,7 +22,6 @@ const CascadingSelect = () => {
     }));
   }, []);
   
-
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
     setSelectedValues((prevState) => ({
@@ -33,6 +31,7 @@ const CascadingSelect = () => {
   }, []);
 
   
+
   // find id 
   const filteredFlowers = showOnlyOneCountry
   ? data.flowerData.filter(({ CountryId }) => CountryId.includes(selectedValues.country) && CountryId.length === 1)
@@ -65,9 +64,9 @@ const CascadingSelect = () => {
       ))}
 
       <div>
-        <div>
-          {selectedValues.CountryName},
-          {selectedValues.flowerName},
+      <div>
+          {data.countryData.find((country) => country.CountryId === selectedValues.country)?.CountryName},
+          {filteredFlowers.length > 0 && data.flowerData.find((flower) => flower.flowerId === selectedValues.flower)?.flowerName},
           {selectedValues.color}
         </div>
       <label>
