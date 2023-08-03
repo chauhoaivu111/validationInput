@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { useState } from "react";
-import listinput from "./data";
-import "../inputfield/InputField.scss";
-import Check_error from "./CheckError";
+import listinput from "./InputData";
+import "./InputField.scss";
+import CheckError from "./CheckError";
 
 
-function InputFields() {
+const InputFields = () => {
   const [inputField, setInputField] = useState(listinput);
 
   const handleChange = (e, index) => {
@@ -32,7 +32,7 @@ function InputFields() {
             />
             <div className="frame_error">
              
-              <Check_error type = {item.type} value ={item.value} error ={item.error}/>
+              <CheckError type = {item.type} value ={item.value} error ={item.error}/>
             </div>
           </div>
         ))}

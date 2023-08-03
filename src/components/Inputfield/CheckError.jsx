@@ -1,5 +1,5 @@
 import { useCallback, useContext, useEffect } from "react";
-import { ErrorContext } from "../Provider";
+import { ErrorContext } from "../../Provider";
 
 const validationPhone = (phone) => {
   const checkphone = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;

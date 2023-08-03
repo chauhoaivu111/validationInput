@@ -2,7 +2,7 @@ const listinput = [
   { label: "name", 
     name: "input1", 
     value: "", 
-    error: "must be string" 
+    error: "name must be string" 
   },
   {
     label: "email",

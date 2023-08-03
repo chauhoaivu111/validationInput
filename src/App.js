@@ -1,37 +1,17 @@
-/* eslint-disable react/jsx-pascal-case */
-import React from 'react';
-import './App.css'
-import CascadingSelect from './selectionfield/CascadingSelect';
-import InputFields from './inputfield/InputFields';
-import SelectionFields from './selectionfield/SelectionFields';
-import Component_error from './ComponentError';
-// import Test from './test';
+// /* eslint-disable react/jsx-pascal-case */
+// import React from 'react';
+// import Layout from './layout/Layout';
 
 
 
-
-
-function App() {
+// function App() {
   
 
-  return (
-    <div>
-      {/* <div>
-      <InputFields/>
-      <Component_error/>
-      </div>
+//   return (
+//     <div>
+//       <Layout/>  
+//     </div>
+//   );
+// }
 
-      <div>
-      <SelectionFields/>
-      </div> */}
-      
-      {/* <Test/> */}
-      <CascadingSelect/>
-   
-    
-      
-    </div>
-  );
-}
-
-export default App;
+// export default App;

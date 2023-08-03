@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import { ErrorContext } from './Provider';
+import { ErrorContext } from '../../Provider';
 
 const ComponentError = () => {
 
