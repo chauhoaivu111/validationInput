@@ -1,20 +1,25 @@
 .main_frame_selection {
   display: flex;
-  margin-top: 3rem;
-
+  // margin-top: rem;
+  
   .first_frame {
     width: 50%;
+    // background-color: aqua;
 
     .frame_selection {
-      margin-top: 2.5rem;
+     
       display: block;
       width: 81%;
+      margin: auto;
+      justify-content: center;
+      margin-top: 2.5rem;
+      
 
       select {
         width: 100%;
         background-color: rgb(244, 244, 244);
         border: 0.5px solid rgb(167, 167, 167);
-        height: 1.5rem;
+        height: 1.9rem;
         border-radius: 3px;
       }
     }
@@ -22,15 +27,25 @@
 
   .second_frame {
 
-    width: 400px;
+    width: 50%;
     // background-color: aquamarine;
-    height: 300px;
+    height: 15rem;
     // box-sizing: border-box;
+    margin: auto;
+    justify-content: center;
+
 
     img {
-        width: 100%;
+        width: 50%;
         height: 100%;
+        margin-left: 25%;
         
+        
+    }
+    h1{
+      text-align: center;
+      align-items: center;
+      margin-top: 5rem;
     }
   }
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
-import data from "../../data";
+import "./CascadingSelect.scss";
+import data from "./data";
 
 const CascadingSelect = () => {
   const [selectedValue, setSelectedValue] = useState({
@@ -17,8 +18,6 @@ const CascadingSelect = () => {
     });
   }, []);
 
-
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSelectedValue((prevState) => ({
@@ -26,7 +25,6 @@ const CascadingSelect = () => {
       [name]: value,
     }));
   };
-
 
   const filterFLowerData = useMemo(() => {
     return data.flowerData.filter((id) =>
@@ -40,10 +38,6 @@ const CascadingSelect = () => {
     );
   }, [selectedValue.flower]);
 
-
-
-
-
   // update name flower
   useEffect(() => {
     const updateFlower = data.flowerData.filter((id) =>
@@ -55,7 +49,7 @@ const CascadingSelect = () => {
       flower: updateFlower.length > 0 ? updateFlower[0].flowerId : "",
     }));
   }, [selectedValue.country]);
-// update name color
+  // update name color
   useEffect(() => {
     const updateColor = data.colorData.filter((id) =>
       id.ColorIds.includes(selectedValue.flower)
@@ -66,40 +60,47 @@ const CascadingSelect = () => {
     }));
   }, [selectedValue.flower]);
 
-
-
- 
   return (
-    <div>
-      {Object.keys(selectedValue).map((item, index) => (
-        <div key={index}>
-          <select name={item} onChange={handleChange} value={selectedValue[item]}>
-            {item === "country" &&
-              data.countryData.map((item) => (
-                <option key={item.CountryId} value={item.CountryId}>
-                  {item.CountryName}
-                </option>
-              ))}
-            {item === "flower" &&
-              filterFLowerData.map((item) => (
-                <option key={item.flowerId} value={item.flowerId}>
-                  {item.flowerName}
-                </option>
-              ))}
-            {item === "color" &&
-              filterColorData.map((item) => (
-                <option key={item.ColorIds} value={item.colorName}>
-                  {item.colorName}
-                </option>
-              ))}
-          </select>
+    <div className="main_frame_cascading">
+      <div className="frame_cascadingcelect">
+        <div className="casadings">
+          {Object.keys(selectedValue).map((item, index) => (
+            <div key={index}>
+              <select
+                name={item}
+                onChange={handleChange}
+                value={selectedValue[item]}
+              >
+                {item === "country" &&
+                  data.countryData.map((item) => (
+                    <option key={item.CountryId} value={item.CountryId}>
+                      {item.CountryName}
+                    </option>
+                  ))}
+                {item === "flower" &&
+                  filterFLowerData.map((item) => (
+                    <option key={item.flowerId} value={item.flowerId}>
+                      {item.flowerName}
+                    </option>
+                  ))}
+                {item === "color" &&
+                  filterColorData.map((item) => (
+                    <option key={item.ColorIds} value={item.colorName}>
+                      {item.colorName}
+                    </option>
+                  ))}
+              </select>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
 
-      <div>
-        {data.countryData.find((item) => item.CountryId === selectedValue.country)?.CountryName},{" "}
-        {data.flowerData.find((item) => item.flowerId === selectedValue.flower)?.flowerName},{" "}
-        {selectedValue.color}
+      <div className="frame_result">
+        <p> <span>Coutry: </span> {data.countryData.find((item) => item.CountryId === selectedValue.country)?.CountryName}</p>
+
+        <p><span>Flower: </span> {data.flowerData.find((item) => item.flowerId === selectedValue.flower)?.flowerName}</p>
+
+        <p><span>Color: </span> {selectedValue.color}</p>
       </div>
     </div>
   );

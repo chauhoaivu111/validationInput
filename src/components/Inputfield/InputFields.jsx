@@ -18,8 +18,7 @@ const InputFields = () => {
   };
 
   return (
-
-      <div>
+      <div className="main_input">
         {inputField.map((item, index) => (
           <div key={index} className="frame_input_label">
             <div>
@@ -39,8 +38,6 @@ const InputFields = () => {
 
         
       </div>
-
   );
 }
-
 export default InputFields;

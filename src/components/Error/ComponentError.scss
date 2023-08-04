@@ -1,0 +1,42 @@
+
+
+.main_frame_errors {
+
+    width: 95%;
+    height: 100%;
+    background-color: rgb(244,224,218) ;
+    display: flex;
+    border-radius: 15px;
+    margin-top: 2rem;
+
+    h1  {
+        color: rgb(179,44,6);
+        margin-left:1rem;
+        margin-right: 1rem;
+    }
+    
+}
+
+
+.frame_errors {
+
+   
+
+    display: block;
+    h2 {
+        color: rgb(179,44,6);
+    }
+
+    .each_error {
+
+        display: flex;
+        p{
+            font-size: 14px;
+            margin-top: -1.5rem;
+            color: rgb(179,44,6);
+            margin-right: 4px;
+        }
+
+    }
+}
+

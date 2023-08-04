@@ -1,9 +1,9 @@
 
 
-import VNR from "../../image/VNR.jpg";
-import VNRP from "../../image/VNRP.jpg";
-import USAR from "../../image/USAR.png";
-import USARP from "../../image/USARP.jpg";
+import VNR from "../../assets/image/VNR.jpg";
+import VNRP from "../../assets/image/VNRP.jpg";
+import USAR from "../../assets/image/USAR.png";
+import USARP from "../../assets/image/USARP.jpg";
 
 
 const keyOption = [

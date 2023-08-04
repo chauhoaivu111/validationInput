@@ -46,7 +46,7 @@ const result = checkValueMatched(keyOption, selectedValues);
         ))}
       </div>
       <div className="second_frame">
-        {result ? <img src={result} alt="" /> : <h1>Not found</h1>}
+       {result ? <img src={result} alt="" /> : <h1>Not found</h1>}
       </div>
     </div>
   );

@@ -1,0 +1,45 @@
+
+
+.main_frame_cascading {
+  display: flex;
+  margin-bottom: 3rem;
+
+  .frame_cascadingcelect {
+    width: 50%;
+    // background-color: aqua;
+
+    .casadings{
+        width: 81%;
+     
+        // background-color: aquamarine;
+        margin: auto;
+    }
+
+    select {
+        width: 100%;
+        background-color: rgb(244, 244, 244);
+        border: 0.5px solid rgb(167, 167, 167);
+        height: 1.9rem;
+        border-radius: 3px;
+        margin-top: 2rem;
+      }
+  }
+
+  .frame_result {
+
+    width: 50%;
+    margin-top: 3rem;
+    
+    p{
+      text-align: center;
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    span{
+      color: red;
+    }
+    }
+
+    // background-color: aqua;
+  }
+}
