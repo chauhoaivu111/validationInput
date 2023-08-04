@@ -96,7 +96,7 @@ const CascadingSelect = () => {
       </div>
 
       <div className="frame_result">
-        <p> <span>Coutry: </span> {data.countryData.find((item) => item.CountryId === selectedValue.country)?.CountryName}</p>
+        <p> <span>Country: </span> {data.countryData.find((item) => item.CountryId === selectedValue.country)?.CountryName}</p>
 
         <p><span>Flower: </span> {data.flowerData.find((item) => item.flowerId === selectedValue.flower)?.flowerName}</p>
 
